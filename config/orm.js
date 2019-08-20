@@ -18,5 +18,15 @@ var orm = {
             cb(result);
         })
     },
-    
+    updateOne: function(table, id, cb){
+        var query = "UPDATE "+table+" SET devoured=true where ?";
+        connection.query(query, {id_burger:id}, function(err,result){
+            if(err){
+                throw err;
+            }
+            cb(result)
+        })
+    }
 };
+
+module.export=orm;
