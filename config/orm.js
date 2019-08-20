@@ -26,6 +26,15 @@ var orm = {
             }
             cb(result)
         })
+    },
+    deleteOne: function(table,id,cb){
+        var query = "DELETE FROM "+table+" where ?";
+        connection.query(query, {id_burger:id}, function(err,result){
+            if(err){
+                throw err;
+            }
+            cb(result)
+        })
     }
 };
 
