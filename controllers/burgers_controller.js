@@ -9,5 +9,29 @@ router.get("/", (req,res) =>{
         };
         console.log(hdbrsObj)
         res.render("index",hdbrsObj)
-    })
+    });
+});
+
+router.post("/api/burgers", (req,res) =>{
+    burger.insertOne(
+        ["burgerName","devoured"],
+        [req.body.burgerName, req.body.devoured],
+        result =>{
+            res.json({id_burger: result.insertId})
+        }
+    );
+});
+
+router.put("/api/burgers/:id", (req,res) =>{
+    id_burger=req.params.id;
+    console.log(id_burger)
+    burger.devourBurger(id_burger, result=>{
+        if (result.changedRows == 0) {
+  
+            return res.status(404).end();
+          } else {
+            res.status(200).end();
+          }
+
+    })    
 })
