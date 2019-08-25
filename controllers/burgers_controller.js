@@ -25,7 +25,7 @@ router.post("/api/burgers", (req,res) =>{
 router.put("/api/burgers/:id", (req,res) =>{
     id_burger=req.params.id;
     console.log(id_burger)
-    burger.devourBurger(id_burger, result=>{
+    burger.updateOne(id_burger, result=>{
         if (result.changedRows == 0) {
   
             return res.status(404).end();
@@ -33,5 +33,18 @@ router.put("/api/burgers/:id", (req,res) =>{
             res.status(200).end();
           }
 
-    })    
-})
+    });    
+});
+
+router.deleteOne("/api/burger/:id", (req,res)=>{
+    id_burger=req.params.id;
+    burger.deleteOne(id_burger,function(result){
+        if (result.affectedRows == 0) {
+            return res.status(404).end();
+          } else {
+            res.status(200).end();
+          };
+});
+});
+  
+module.exports = router;
