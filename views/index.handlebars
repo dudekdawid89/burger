@@ -1,0 +1,42 @@
+<div class="container main jumbotron">
+        <div class="text-center">
+            <img src="assets/img/burger.jpg" width="250px" height="200px" alt="">
+               
+        <div class="burgers">
+            <h4>Enter burger name:</h4> <input id="burger-input" type="text"><button type="button"
+                class="btn btn-info burger-button">OK</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                 <h1>Ordered</h1>
+                     {{#each burgers}}
+                     {{#unless devoured}}
+                        <h5><button type="button" class="btn btn-danger eat" id={{id_burger}}>devour</button>
+                          {{id_burger}}:{{burgerName}}</h5>
+                     {{/unless}}
+                    {{/each}}
+  </div>
+</div>
+
+        </div>
+        <div class="col-6">
+            <div class="card">
+                 <div class="card-body">
+                    <h1>Devoured</h1>
+                         {{#each burgers}}
+                        {{#if devoured}}
+                          <h5><button type="button" class="btn btn-success delete" id={{id_burger}}>Throw-it</button>
+                             {{id_burger}}:{{burgerName}}</h5>
+                        {{/if}}
+                        {{/each}}
+         </div>
+        </div>
+        </div>
+    </div>
+</div>
