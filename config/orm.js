@@ -8,7 +8,7 @@ let orm = {
             }
             cb(result);
         })
-    },
+    }, 
     insertOne: function(table, vals, cb){
         let query = "INSERT INTO "+table+" (burgerName, devoured) values("+vals+");";
         console.log(query)

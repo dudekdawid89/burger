@@ -8,4 +8,34 @@
 
 3. Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
 
-Click to see burger app
+[Click ]() to see Burger App
+ 
+
+## Application was made based on MVC structure
+
+## List of technology used for app:
+ 
+    1. Node.js to create web server
+    2. MySql to store existing data
+    3. ORM for custom controllers
+    4. Express for control routning 
+    5. HTML
+    6. CSS
+    7. Bootstrap
+    8. Handlebars 
+
+## NPM packages installation instructions command:
+
+Terminal command (1) : npm init -y (create package.json)
+
+Terminal command (2) : npm i express express-handlebars mysql dotenv
+
+
+## Run instructions
+
+ 1. Termianal command : node server.js
+ 2. Open browser and run: localhost:8080  
+
+
+
+
