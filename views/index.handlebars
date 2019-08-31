@@ -1,10 +1,13 @@
-<div class="container main jumbotron">
-        <div class="text-center">
-            <img src="assets/img/burger.jpg" width="250px" height="200px" alt="">
-               
-        <div class="burgers">
-            <h4>Enter burger name:</h4> <input id="burger-input" type="text"><button type="button"
-                class="btn btn-info burger-button">OK</button>
+<div class="container">
+    <div class="text-center">
+        <span id="burgerSign">Burger Restaurant</span>
+    </div>
+    <br>
+    <div class="input-group">
+        <input type="text" class="form-control" id="burger-input" placeholder="Enter you favourite burger"
+            aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-light burger-button" type="button">Button</button>
         </div>
     </div>
     <br>
@@ -14,29 +17,47 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-body">
-                 <h1>Ordered</h1>
-                     {{#each burgers}}
-                     {{#unless devoured}}
-                        <h5><button type="button" class="btn btn-danger eat" id={{id_burger}}>devour</button>
-                          {{id_burger}}:{{burgerName}}</h5>
-                     {{/unless}}
+                    <h1 class="text-center" id="yourOrder">Your order</h1>
+                    <br>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <div class="row">
+                        <div class="col-9">
+                            <span id="b1"><i class="fa fa-hamburger"></i> {{burgerName}}</span>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-outline-dark btn-lg eat"
+                                id={{id_burger}}>Devour</button>
+                        </div>
+                    </div>
+                    <br>
+                    {{/unless}}
                     {{/each}}
-  </div>
-</div>
-
+                </div>
+            </div>
         </div>
+
         <div class="col-6">
             <div class="card">
-                 <div class="card-body">
-                    <h1>Devoured</h1>
-                         {{#each burgers}}
-                        {{#if devoured}}
-                          <h5><button type="button" class="btn btn-success delete" id={{id_burger}}>Throw-it</button>
-                             {{id_burger}}:{{burgerName}}</h5>
-                        {{/if}}
-                        {{/each}}
-         </div>
-        </div>
+                <div class="card-body">
+                    <h1 class="text-center" id="yourOrder">Devoured</h1>
+                    <br>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <div class="row">
+                        <div class="col-9">
+                            <span id="b2"><i class="fa fa-hamburger"></i> {{burgerName}}</span>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-outline-danger btn-lg delete"
+                                id={{id_burger}}>Delete</button>
+                        </div>
+                    </div>
+                    <br>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
         </div>
     </div>
 </div>
