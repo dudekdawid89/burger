@@ -1,6 +1,9 @@
 <div class="container">
     <div class="text-center">
-        <span id="burgerSign">Burger Restaurant</span>
+        <div class="row">
+        <span id="burgerSign" class="col-lg-12 col-md-12 col-xs-12">Burger Restaurant</span>
+
+        </div>
     </div>
     <br>
     <div class="input-group">
@@ -14,7 +17,7 @@
     <br>
     <br>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12 ">
             <div class="card">
                 <div class="card-body">
                     <h1 class="text-center" id="yourOrder">Your order</h1>
@@ -36,8 +39,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-6">
+<br>
+        <div class="col-md-6 col-sm-12 ">
             <div class="card">
                 <div class="card-body">
                     <h1 class="text-center" id="yourOrder">Devoured</h1>
@@ -45,10 +48,10 @@
                     {{#each burgers}}
                     {{#if devoured}}
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col-lg-9">
                             <span id="b2"><i class="fa fa-hamburger"></i> {{burgerName}}</span>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-12">
                             <button type="button" class="btn btn-outline-danger btn-lg delete"
                                 id={{id_burger}}>Delete</button>
                         </div>
