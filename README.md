@@ -34,7 +34,7 @@ Terminal command (2) : `npm i express express-handlebars mysql dotenv`
 ## Run instructions
 
  1. Termianal command : `node server.js`
- 2. Open browser and run: `localhost:8080`  
+ 2. Open browser and run: [localhost:8080](http://localhost:8080)  
 
 
 
