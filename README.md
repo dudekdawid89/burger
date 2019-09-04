@@ -26,15 +26,15 @@
 
 ## NPM packages installation instructions command:
 
-Terminal command (1) : npm init -y (create package.json)
+Terminal command (1) : `npm init -y` (create package.json)
 
-Terminal command (2) : npm i express express-handlebars mysql dotenv
+Terminal command (2) : `npm i express express-handlebars mysql dotenv`
 
 
 ## Run instructions
 
- 1. Termianal command : node server.js
- 2. Open browser and run: localhost:8080  
+ 1. Termianal command : `node server.js`
+ 2. Open browser and run: `localhost:8080`  
 
 
 
