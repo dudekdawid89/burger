@@ -8,7 +8,7 @@
 
 3. Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
 
-[Click ]() to see Burger App
+[Click ](https://burger-live.herokuapp.com/) to see Burger App
  
 
 ## Application was made based on MVC structure
@@ -18,7 +18,7 @@
     1. Node.js to create web server
     2. MySql to store existing data
     3. ORM for custom controllers
-    4. Express for control routning 
+    4. Express for control routing 
     5. HTML
     6. CSS
     7. Bootstrap
@@ -33,7 +33,7 @@ Terminal command (2) : `npm i express express-handlebars mysql dotenv`
 
 ## Run instructions
 
- 1. Termianal command : `node server.js`
+ 1. Terminal command : `node server.js`
  2. Open browser and run: [localhost:8080](http://localhost:8080)  
 
 
